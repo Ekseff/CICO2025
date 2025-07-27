@@ -129,7 +129,7 @@
 }
 
 #artist {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     min-width: 0;
@@ -149,8 +149,8 @@
 #difficulty {
     padding-left: 10px;
     padding-right: 10px;
-    min-width: 100%;
-    max-width: calc(100% - 1000px);
+    min-width: 0;
+    max-width: calc(100% - 10px);
     max-height: 32px;
     font-size: 16px;
     overflow-x: hidden;
@@ -311,11 +311,18 @@
     mix-blend-mode: screen;
     font-size: 25px;
     padding-left: 10px;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     height: 0px;
     overflow: hidden;
     display: flex;
     align-items: center;
+}
+
+#custom > img {
+    width: 30px;
+    height: 100%;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 #custom.transition {
