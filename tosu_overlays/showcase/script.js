@@ -136,12 +136,14 @@ socket.onmessage = event => {
         }
     }
 
-    const newTime = data.beatmap.time.lastObject - data.beatmap.time.firstObject;
-    const minutes = Math.floor(newTime / 60000);
-    const seconds = Math.floor((newTime % 60000) / 1000);
-    const formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    if (formattedTime !== tempLength) {
-        tempLength = formattedTime;
+    let newTime = data.beatmap.time.lastObject - data.beatmap.time.firstObject;
+    if(data.play.mods.number === 64 || data.play.mods.number === 576){
+        newTime = Math.floor(newTime * (2/3));
+    } 
+
+    
+    if (newTime !== tempLength) {
+        tempLength = newTime;
         length.update(Math.floor(newTime / 1000))
     }
     
