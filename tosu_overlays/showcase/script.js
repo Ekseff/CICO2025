@@ -136,9 +136,10 @@ socket.onmessage = event => {
         }
     }
 
-    let newTime = data.beatmap.time.lastObject - data.beatmap.time.firstObject;
+    let newTime = data.beatmap.time.lastObject;
+
     if(data.play.mods.number === 64 || data.play.mods.number === 576){
-        newTime = Math.floor(newTime * (2/3));
+        newTime = Math.round(newTime * (2/3));
     } 
 
     
