@@ -74,14 +74,27 @@
     width: 1920px;
     height: 1080px;
     background-color: black;
-    opacity: 0;
+    opacity: 0.8;
     z-index: 10;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-1080px);
 }
 
 #transition.active {
+    transform: translateY(0);
     opacity: 1;
 }
+
+#tseed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 96px;
+    font-family: Fraunces;
+    color: #fff;
+}
+
 
 .mapstats {
     padding-left: 50px;

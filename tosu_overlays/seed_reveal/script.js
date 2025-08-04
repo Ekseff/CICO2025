@@ -20,7 +20,6 @@ function showUser(user) {
                 String.fromCodePoint(127397 + char.charCodeAt())
             );
     }
-
     container.innerHTML = `
         <div class="uinfo">
             <img id="avatar" src="${user.Avatar}" alt="${user.Player}">
@@ -131,13 +130,16 @@ fetch('seeds.json')
 
 document.body.addEventListener('click', function() {
     
-    
+    const seed = document.getElementById("tseed")
+
     document.getElementById('transition').classList.add('active');
+    currentIndex = (currentIndex + 1) % users.length;
+    seed.innerHTML= users[currentIndex]["Seed"];
     // wait 2s
     setTimeout(() => {
         
         if (users.length === 0) return;
-        currentIndex = (currentIndex + 1) % users.length;
+        
         showUser(users[currentIndex]);
         setTimeout(() => {
             document.getElementById('transition').classList.remove('active');
