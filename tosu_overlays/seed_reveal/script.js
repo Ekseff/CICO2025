@@ -134,7 +134,7 @@ document.body.addEventListener('click', function() {
 
     document.getElementById('transition').classList.add('active');
     currentIndex = (currentIndex + 1) % users.length;
-    seed.innerHTML= users[currentIndex]["Seed"];
+    seed.innerHTML= "#" +users[currentIndex]["Seed"];
     // wait 2s
     setTimeout(() => {
         
