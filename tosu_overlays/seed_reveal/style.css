@@ -1,0 +1,133 @@
+:root {
+    max-width: 1920px;
+    max-height: 1080px;
+    font-weight: 400;
+}
+#main {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-image: url("assets/bg.png");
+    background-size: contain;
+    font-family: Fraunces;
+    color:white;
+    font-optical-sizing: auto;
+
+
+}
+
+.invert {
+    background-color: #ffffffff;
+    color: black;
+    -webkit-text-fill-color: black;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-shadow: none;
+    mix-blend-mode: screen;    
+}
+
+
+.outline {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+#topt {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 1920px;
+    height: 142px;
+    font-size: 64px;
+    color: white;
+    text-shadow: 0 12px 60px #000, 0 2px 40px #222;
+    
+}
+
+#content {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 1920px;
+    height: 900px;
+    font-size: 48px;
+    color: white;
+    text-shadow: 0 12px 60px #000, 0 2px 40px #222;
+}
+
+#avatar {
+    width: 200px;
+    height: 200px;
+}
+
+#avgscr, #avgrank {
+    font-size: 36px;
+}
+
+#transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    background-color: black;
+    opacity: 0;
+    z-index: 10;
+    transition: all 0.1s ease-in-out;
+}
+
+#transition.active {
+    opacity: 1;
+}
+
+.mapstats {
+    padding-left: 50px;
+    width: 70%;
+}
+
+#nm, #hd, #hr, #dt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.pickhead {
+    font-size: 24px;
+}
+.nm,.hd,.hr,.dt{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+
+}
+
+.nm,.hd,.hr,.dt > * {
+    padding-top: 10px;
+    padding-right: 500px;
+
+}
+
+.pickscore {
+    font-weight: 800;
+}
+
+.picksong {
+    max-width: 1000px;
+    text-wrap: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+.pickname {
+    width: 1000px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    padding-left: 1%;
+    padding-right: 1%;
+}
