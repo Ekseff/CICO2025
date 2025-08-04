@@ -1,5 +1,5 @@
 let users = []; 
-let currentIndex = 0;
+let currentIndex = -1;
 const container = document.getElementById('content');
 
 fetch('maps.json')
@@ -122,7 +122,7 @@ fetch('seeds.json')
     .then(response => response.json())
     .then(data => {
         users = data || [];
-        showUser(users[currentIndex]);
+        //showUser(users[currentIndex]);
     })
     .catch(error => {
         console.error('Error loading seeds.json:', error);
